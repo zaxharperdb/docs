@@ -16,8 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`v1.6.4`, `1.6.4`, `v1.6`, `1.6`, `tetedemoine`, `latest` (*scratch/amd64/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/d004e59dcb636ab24a6e2ae827fe4c8290837127/scratch/amd64/Dockerfile)
+-	[`v1.6.4`, `1.6.4`, `v1.6`, `1.6`, `tetedemoine`, `latest` (*scratch/arm/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/d004e59dcb636ab24a6e2ae827fe4c8290837127/scratch/arm/Dockerfile)
 -	[`v1.6.4-alpine`, `1.6.4-alpine`, `v1.6-alpine`, `1.6-alpine`, `tetedemoine-alpine`, `alpine` (*alpine/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/d004e59dcb636ab24a6e2ae827fe4c8290837127/alpine/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v6/job/traefik/badge/icon) (`arm32v6/traefik` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v6/job/traefik/)
 
 # Quick reference
 
