@@ -16,8 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`v1.6.4`, `1.6.4`, `v1.6`, `1.6`, `tetedemoine`, `latest` (*scratch/amd64/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/d004e59dcb636ab24a6e2ae827fe4c8290837127/scratch/amd64/Dockerfile)
--	[`v1.6.4-alpine`, `1.6.4-alpine`, `v1.6-alpine`, `1.6-alpine`, `tetedemoine-alpine`, `alpine` (*alpine/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/d004e59dcb636ab24a6e2ae827fe4c8290837127/alpine/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `traefik` does not support the currently selected architecture (`s390x`).
 
 # Quick reference
 
