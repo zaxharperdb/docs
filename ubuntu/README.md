@@ -16,11 +16,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`17.10`, `artful-20180524`, `artful` (*artful/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/58cc180042b7ebec2b683576faa00c04d5d011e2/artful/Dockerfile)
--	[`18.04`, `bionic-20180526`, `bionic`, `latest`, `rolling` (*bionic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/58cc180042b7ebec2b683576faa00c04d5d011e2/bionic/Dockerfile)
--	[`18.10`, `cosmic-20180605`, `cosmic`, `devel` (*cosmic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/58cc180042b7ebec2b683576faa00c04d5d011e2/cosmic/Dockerfile)
--	[`14.04`, `trusty-20180531`, `trusty` (*trusty/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/58cc180042b7ebec2b683576faa00c04d5d011e2/trusty/Dockerfile)
--	[`16.04`, `xenial-20180525`, `xenial` (*xenial/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/58cc180042b7ebec2b683576faa00c04d5d011e2/xenial/Dockerfile)
+-	[`17.10`, `artful-20180524`, `artful` (*artful/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/b0faa072a5f7bb0a5873eaed5de830f2e4931c38/artful/Dockerfile)
+-	[`18.04`, `bionic-20180526`, `bionic`, `latest`, `rolling` (*bionic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/b0faa072a5f7bb0a5873eaed5de830f2e4931c38/bionic/Dockerfile)
+-	[`18.10`, `cosmic-20180605`, `cosmic`, `devel` (*cosmic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/b0faa072a5f7bb0a5873eaed5de830f2e4931c38/cosmic/Dockerfile)
+-	[`14.04`, `trusty-20180531`, `trusty` (*trusty/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/b0faa072a5f7bb0a5873eaed5de830f2e4931c38/trusty/Dockerfile)
+-	[`16.04`, `xenial-20180525`, `xenial` (*xenial/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/b0faa072a5f7bb0a5873eaed5de830f2e4931c38/xenial/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/ubuntu/badge/icon) (`arm64v8/ubuntu` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/ubuntu/)
 
 # Quick reference
 
@@ -64,9 +66,9 @@ Development of Ubuntu is led by UK-based Canonical Ltd., a company owned by Sout
 
 This image is built from official rootfs tarballs provided by Canonical (specifically, https://partner-images.canonical.com/core/).
 
-The `ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `ubuntu:rolling` tag points to the latest release (regardless of LTS status).
+The `arm64v8/ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `arm64v8/ubuntu:rolling` tag points to the latest release (regardless of LTS status).
 
-Along a similar vein, the `ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
+Along a similar vein, the `arm64v8/ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
 
 ## Locales
 
@@ -82,10 +84,10 @@ ENV LANG en_US.utf8
 
 ## `/etc/apt/sources.list`
 
-### `ubuntu:18.04`
+### `arm64v8/ubuntu:18.04`
 
 ```console
-$ docker run ubuntu:18.04 grep -v '^#' /etc/apt/sources.list
+$ docker run arm64v8/ubuntu:18.04 grep -v '^#' /etc/apt/sources.list
 
 deb http://archive.ubuntu.com/ubuntu/ bionic main restricted
 
@@ -108,10 +110,10 @@ deb-src http://security.ubuntu.com/ubuntu/ bionic-security universe
 deb http://security.ubuntu.com/ubuntu/ bionic-security multiverse
 ```
 
-### `ubuntu:16.04`
+### `arm64v8/ubuntu:16.04`
 
 ```console
-$ docker run ubuntu:16.04 grep -v '^#' /etc/apt/sources.list
+$ docker run arm64v8/ubuntu:16.04 grep -v '^#' /etc/apt/sources.list
 
 deb http://archive.ubuntu.com/ubuntu/ xenial main restricted
 deb-src http://archive.ubuntu.com/ubuntu/ xenial main restricted
@@ -131,10 +133,10 @@ deb http://archive.ubuntu.com/ubuntu/ xenial-security universe
 deb-src http://archive.ubuntu.com/ubuntu/ xenial-security universe
 ```
 
-### `ubuntu:14.04`
+### `arm64v8/ubuntu:14.04`
 
 ```console
-$ docker run ubuntu:14.04 grep -v '^#' /etc/apt/sources.list
+$ docker run arm64v8/ubuntu:14.04 grep -v '^#' /etc/apt/sources.list
 
 deb http://archive.ubuntu.com/ubuntu/ trusty main restricted
 deb-src http://archive.ubuntu.com/ubuntu/ trusty main restricted
